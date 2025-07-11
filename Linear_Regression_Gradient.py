@@ -24,7 +24,7 @@ def linear_regression_gradient_descent(X: np.ndarray, y: np.ndarray, alpha: floa
 		y_hat = X @ theta
 		
 		# Calculate the gradient function
-		gradient_function = 2/len(X) * np.dot(X.T, (y_hat - y))
+		gradient_function = 2/len(X) * np.dot(X.T, (y_hat - y)) # You can use 1/len(X) too
 		
         # Calculate the updated parameters
 		theta = theta - alpha * gradient_function
